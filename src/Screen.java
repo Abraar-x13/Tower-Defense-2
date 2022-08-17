@@ -114,8 +114,8 @@ public class Screen extends JPanel implements Runnable{
             g.setColor(new Color(240,20, 20));
             g.fillRect(0,0, myWidth,myHeight);
             g.setColor(new Color(255,255, 255));
-            g.setFont(new Font("Courier New", Font.BOLD, 14));
-            g.drawString("GAME OVER!",10, 10);
+            g.setFont(new Font("Courier New", Font.BOLD, 30));
+            g.drawString("GAME OVER!",250, 230);
         }
         if(isWin){
             g.setColor(new Color(200, 50, 200));
