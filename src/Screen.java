@@ -118,9 +118,9 @@ public class Screen extends JPanel implements Runnable{
             g.drawString("GAME OVER!",250, 230);
         }
         if(isWin){
-            g.setColor(new Color(200, 50, 200));
+            g.setColor(new Color(64, 103, 220));
             g.fillRect(0, 0, getWidth(), getHeight());
-            g.setColor(new Color(0,0, 0));
+            g.setColor(new Color(255,255, 255));
             g.setFont(new Font("Courier New", Font.BOLD, 18));
             if(level == maxLevel){
                 g.drawString("You won all the level! You are the KING now....",50, 220);
