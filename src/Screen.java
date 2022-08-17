@@ -83,7 +83,7 @@ public class Screen extends JPanel implements Runnable{
     @Override
     public void paintComponent(Graphics g){
 
-        if(isFirst && health > 0) {
+        if(isFirst && health > 0) {  //isFirst is true only for first time. After that it becomes false and run method as in game loop starts working
             myWidth = getWidth();
             myHeight = getHeight();
             define();
@@ -115,7 +115,7 @@ public class Screen extends JPanel implements Runnable{
             g.fillRect(0,0, myWidth,myHeight);
             g.setColor(new Color(255,255, 255));
             g.setFont(new Font("Courier New", Font.BOLD, 30));
-            g.drawString("GAME OVER!",250, 230);
+            g.drawString("GAME OVER!",255, 230);
         }
         if(isWin){
             g.setColor(new Color(64, 103, 220));
@@ -123,11 +123,12 @@ public class Screen extends JPanel implements Runnable{
             g.setColor(new Color(255,255, 255));
             g.setFont(new Font("Courier New", Font.BOLD, 18));
             if(level == maxLevel){
-                g.drawString("You won all the level! You are the KING now....",50, 220);
+                g.drawString("You won all the level! You are the KING now....",90, 220);
+                g.drawString("Take a Bow King", 255, 260);
             }
             else{
-                g.drawString("YOU WON!",270, 210);
-                g.drawString("Congratulations. Please wait for the next level....",70, 250);
+                g.drawString("YOU WON!",300, 210);
+                g.drawString("Congratulations. Please wait for the next level....",75, 250);
             }
         }
 
@@ -154,7 +155,7 @@ public class Screen extends JPanel implements Runnable{
     public void run(){
 
 
-        while(true){
+        while(true){ //game loop which handles almost everything like speed, how character do or walks
 
             if(!isFirst && health > 0 && !isWin){
                 room.physic();
