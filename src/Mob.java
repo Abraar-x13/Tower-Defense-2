@@ -21,6 +21,8 @@ public class Mob extends Rectangle {
 
     }
 
+
+
     public void spawnMob(int mobID) {
         for (int y = 0; y < Screen.room.block.length; y++) {
             if (Screen.room.block[y][0].groundID == Value.groundRoad) {
@@ -51,7 +53,13 @@ public class Mob extends Rectangle {
     }
 
 
-    public int walkFrame = 0, walkSpeed =40;
+    public int walkFrame = 0;
+    public static int walkSpeed = 40;
+
+    public static void setSpeed(int i) {
+        walkSpeed = i;
+    }
+
     public void physic() {
         if (walkFrame >= walkSpeed) {
 
